@@ -1,3 +1,5 @@
+// Copyright (c) 2025 Ilya Fedorov
+// SPDX-License-Identifier: MIT
 
 #Область ОбработчикиСобытийФормы
 
