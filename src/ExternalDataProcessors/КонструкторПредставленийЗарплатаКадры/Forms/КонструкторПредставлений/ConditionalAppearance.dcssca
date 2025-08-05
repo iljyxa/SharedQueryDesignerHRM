@@ -90,9 +90,20 @@
 				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
 			</dcscor:item>
 			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:use>false</dcscor:use>
 				<dcscor:parameter>Отображать</dcscor:parameter>
 				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
 			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
 		</appearance>
+		<presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Не отображать флажок Отбор где он недоступен</v8:content>
+			</v8:item>
+		</presentation>
 	</item>
 </ConditionalAppearance>

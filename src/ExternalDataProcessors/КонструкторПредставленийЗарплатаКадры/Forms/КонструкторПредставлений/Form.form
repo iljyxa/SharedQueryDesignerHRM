@@ -911,7 +911,7 @@
           </dataPath>
           <toolTip>
             <key>ru</key>
-            <value>Имя временной таблицы, которая содержит поля и значения, соответствующие доступным полям представления, на основании которой будут фильтроваться записи, попадающие в результат.
+            <value>Указывается имя существующей временной таблицы, которая содержит поля и значения, соответствующие доступным полям представления, на основании которой будут фильтроваться записи, попадающие в результат.
 Если для представления допустимо не указывать фильтр, то будут получены все записи из БД.</value>
           </toolTip>
           <toolTipRepresentation>Button</toolTipRepresentation>
@@ -1762,6 +1762,10 @@
     <autoFill>true</autoFill>
   </autoCommandBar>
   <handlers>
+    <event>OnOpen</event>
+    <name>ПриОткрытии</name>
+  </handlers>
+  <handlers>
     <event>OnCreateAtServer</event>
     <name>ПриСозданииНаСервере</name>
   </handlers>
@@ -2152,6 +2156,13 @@
     </action>
     <currentRowUse>Auto</currentRowUse>
   </formCommands>
+  <parameters>
+    <name>РежимВставки</name>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <keyParameter>true</keyParameter>
+  </parameters>
   <commandInterface>
     <navigationPanel/>
     <commandBar/>
