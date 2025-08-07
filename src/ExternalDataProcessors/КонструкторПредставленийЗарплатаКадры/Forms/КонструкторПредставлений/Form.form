@@ -1386,6 +1386,10 @@
             <event>OnStartEdit</event>
             <name>ПараметрыПриНачалеРедактирования</name>
           </handlers>
+          <handlers>
+            <event>OnChange</event>
+            <name>ПараметрыПриИзменении</name>
+          </handlers>
           <searchStringAddition>
             <name>ПараметрыСтрокаПоиска</name>
             <id>204</id>
@@ -1681,16 +1685,15 @@
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
     <items xsi:type="form:Button">
-      <name>ФормаСформироватьТекстЗапроса</name>
-      <id>96</id>
-      <visible>true</visible>
+      <name>ФормаВставитьТекстЗапросаПредставления</name>
+      <id>330</id>
       <enabled>true</enabled>
       <userVisible>
         <common>true</common>
       </userVisible>
       <extendedTooltip>
-        <name>ФормаСформироватьТекстЗапросаРасширеннаяПодсказка</name>
-        <id>97</id>
+        <name>ФормаВставитьТекстЗапросаПредставленияРасширеннаяПодсказка</name>
+        <id>331</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -1698,7 +1701,32 @@
           <horizontalAlign>Left</horizontalAlign>
         </extInfo>
       </extendedTooltip>
-      <commandName>Form.Command.СформироватьТекстЗапроса</commandName>
+      <commandName>Form.Command.ВставитьТекстЗапросаПредставления</commandName>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <items xsi:type="form:Button">
+      <name>ФормаПоказатьТекстЗапроса</name>
+      <id>328</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаПоказатьТекстЗапросаРасширеннаяПодсказка</name>
+        <id>329</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.ПоказатьТекстЗапроса</commandName>
       <representation>Auto</representation>
       <defaultButton>true</defaultButton>
       <autoMaxWidth>true</autoMaxWidth>
@@ -1947,6 +1975,23 @@
           <common>true</common>
         </edit>
       </columns>
+      <columns>
+        <name>ЕстьНезаполненныеОбязательныеПараметры</name>
+        <title>
+          <key>ru</key>
+          <value>Есть незаполненные обязательные параметры</value>
+        </title>
+        <id>29</id>
+        <valueType>
+          <types>Boolean</types>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
     </additionalColumns>
   </attributes>
   <attributes>
@@ -1986,27 +2031,24 @@
       <itemValueType/>
     </extInfo>
   </attributes>
-  <formCommands>
-    <name>СформироватьТекстЗапроса</name>
+  <attributes>
+    <name>ПолноеИмяОбработки</name>
     <title>
       <key>ru</key>
-      <value>Представление запроса</value>
+      <value>Полное имя обработки</value>
     </title>
-    <id>2</id>
-    <use>
+    <id>30</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
       <common>true</common>
-    </use>
-    <picture xsi:type="core:PictureRef">
-      <picture>StdPicture.QueryWizardTempTable</picture>
-    </picture>
-    <action xsi:type="form:FormCommandHandlerContainer">
-      <handler>
-        <name>СформироватьТекстЗапроса</name>
-      </handler>
-    </action>
-    <representation>TextPicture</representation>
-    <currentRowUse>Auto</currentRowUse>
-  </formCommands>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
   <formCommands>
     <name>РедакторОписаний</name>
     <title>
@@ -2154,6 +2196,48 @@
         <name>СброситьТекущиеНастройки</name>
       </handler>
     </action>
+    <currentRowUse>Auto</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ПоказатьТекстЗапроса</name>
+    <title>
+      <key>ru</key>
+      <value>Показать запрос</value>
+    </title>
+    <id>14</id>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.QueryWizardTempTable</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ПоказатьТекстЗапроса</name>
+      </handler>
+    </action>
+    <representation>TextPicture</representation>
+    <currentRowUse>Auto</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ВставитьТекстЗапросаПредставления</name>
+    <title>
+      <key>ru</key>
+      <value>Вставить</value>
+    </title>
+    <id>15</id>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.ShowInList</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ВставитьТекстЗапросаПредставления</name>
+      </handler>
+    </action>
+    <representation>TextPicture</representation>
     <currentRowUse>Auto</currentRowUse>
   </formCommands>
   <parameters>
