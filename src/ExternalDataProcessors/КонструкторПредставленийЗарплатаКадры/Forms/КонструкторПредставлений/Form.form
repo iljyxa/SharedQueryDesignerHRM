@@ -294,47 +294,11 @@
           <name>ГруппаПодсказкаПолей</name>
           <id>293</id>
           <items xsi:type="form:Decoration">
-            <name>КартинкаПодсказкиПолей</name>
-            <id>298</id>
-            <title>
-              <key>ru</key>
-              <value>Картинка подсказки полей</value>
-            </title>
-            <visible>true</visible>
-            <enabled>true</enabled>
-            <userVisible>
-              <common>true</common>
-            </userVisible>
-            <extendedTooltip>
-              <name>КартинкаПодсказкиПолейРасширеннаяПодсказка</name>
-              <id>300</id>
-              <type>Label</type>
-              <autoMaxWidth>true</autoMaxWidth>
-              <autoMaxHeight>true</autoMaxHeight>
-              <extInfo xsi:type="form:LabelDecorationExtInfo">
-                <horizontalAlign>Left</horizontalAlign>
-              </extInfo>
-            </extendedTooltip>
-            <contextMenu>
-              <name>КартинкаПодсказкиПолейКонтекстноеМеню</name>
-              <id>299</id>
-              <autoFill>true</autoFill>
-            </contextMenu>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:PictureDecorationExtInfo">
-              <picture xsi:type="core:PictureRef">
-                <picture>CommonPicture.Предупреждение</picture>
-              </picture>
-              <fileDragMode>AsFileRef</fileDragMode>
-            </extInfo>
-          </items>
-          <items xsi:type="form:Decoration">
             <name>НадписьПодсказкаПолей</name>
             <id>295</id>
             <title>
               <key>ru</key>
-              <value>Выберите источник данных для заполнения доступных полей</value>
+              <value>Выберите источник данных на странице &quot;Параметры&quot; для заполнения доступных полей</value>
             </title>
             <visible>true</visible>
             <enabled>true</enabled>
@@ -357,16 +321,14 @@
               <autoFill>true</autoFill>
             </contextMenu>
             <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
+            <maxWidth>56</maxWidth>
             <autoMaxHeight>true</autoMaxHeight>
             <horizontalStretch>true</horizontalStretch>
-            <textColor xsi:type="core:ColorDef">
-              <red>166</red>
-              <green>133</green>
-            </textColor>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
+            <font xsi:type="core:FontRef">
+              <font>Style.NormalTextFont</font>
+              <underline>true</underline>
+            </font>
+            <extInfo xsi:type="form:LabelDecorationExtInfo"/>
           </items>
           <visible>true</visible>
           <enabled>true</enabled>
@@ -394,6 +356,9 @@
             <behavior>Auto</behavior>
             <showLeftMargin>true</showLeftMargin>
             <united>true</united>
+            <backColor xsi:type="core:ColorRef">
+              <color>Windows.ToolTip</color>
+            </backColor>
             <throughAlign>Auto</throughAlign>
             <currentRowUse>Auto</currentRowUse>
           </extInfo>
@@ -1804,7 +1769,6 @@
   <autoFillCheck>true</autoFillCheck>
   <allowFormCustomize>true</allowFormCustomize>
   <enabled>true</enabled>
-  <scalingMode>Compact</scalingMode>
   <showTitle>true</showTitle>
   <showCloseButton>true</showCloseButton>
   <attributes>
