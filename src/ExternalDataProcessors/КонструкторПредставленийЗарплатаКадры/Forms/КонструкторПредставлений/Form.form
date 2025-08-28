@@ -1351,10 +1351,6 @@
             <event>OnStartEdit</event>
             <name>ПараметрыПриНачалеРедактирования</name>
           </handlers>
-          <handlers>
-            <event>OnChange</event>
-            <name>ПараметрыПриИзменении</name>
-          </handlers>
           <searchStringAddition>
             <name>ПараметрыСтрокаПоиска</name>
             <id>204</id>
@@ -1474,6 +1470,12 @@
           <dataPath xsi:type="form:DataPath">
             <segments>Items.Представления.CurrentData.Уточнение</segments>
           </dataPath>
+          <toolTip>
+            <key>ru</key>
+            <value>Постфикс, проставляемый для представления в качестве разделителя как визуального, так и временных таблиц.
+Необходим в тех случаях, когда требуется несколько одинаковых представлений с разными данными.</value>
+          </toolTip>
+          <toolTipRepresentation>Button</toolTipRepresentation>
           <extendedTooltip>
             <name>ПредставленияУточнениеРасширеннаяПодсказка</name>
             <id>292</id>
@@ -1501,6 +1503,10 @@
             <chooseType>true</chooseType>
             <typeDomainEnabled>true</typeDomainEnabled>
             <textEdit>true</textEdit>
+            <inputHint>
+              <key>ru</key>
+              <value>Постфикс к наименованию временной таблицы</value>
+            </inputHint>
           </extInfo>
         </items>
         <visible>true</visible>
@@ -1529,6 +1535,9 @@
           </picture>
           <group>Vertical</group>
           <showTitle>true</showTitle>
+          <titleDataPath xsi:type="form:DataPath">
+            <segments>ДанныеЗаголовкаПараметров</segments>
+          </titleDataPath>
         </extInfo>
       </items>
       <items xsi:type="form:FormGroup">
@@ -1702,7 +1711,6 @@
     <items xsi:type="form:Button">
       <name>ФормаРедакторОписаний</name>
       <id>98</id>
-      <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
         <common>true</common>
@@ -1747,6 +1755,37 @@
       <representation>Auto</representation>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+      <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
+    </items>
+    <items xsi:type="form:Button">
+      <name>ФормаСтраницаПроекта</name>
+      <id>332</id>
+      <title>
+        <key>ru</key>
+        <value>GitHub</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаСтраницаПроектаРасширеннаяПодсказка</name>
+        <id>333</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.СтраницаПроекта</commandName>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <groupHorizontalAlign>Right</groupHorizontalAlign>
       <placementArea>UserCmds</placementArea>
       <representationInContextMenu>Auto</representationInContextMenu>
       <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
@@ -2013,6 +2052,24 @@
       <common>true</common>
     </edit>
   </attributes>
+  <attributes>
+    <name>ДанныеЗаголовкаПараметров</name>
+    <title>
+      <key>ru</key>
+      <value>Данные заголовка параметров</value>
+    </title>
+    <id>34</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
   <formCommands>
     <name>РедакторОписаний</name>
     <title>
@@ -2202,6 +2259,23 @@
       </handler>
     </action>
     <representation>TextPicture</representation>
+    <currentRowUse>Auto</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>СтраницаПроекта</name>
+    <title>
+      <key>ru</key>
+      <value>Страница проекта</value>
+    </title>
+    <id>18</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>СтраницаПроекта</name>
+      </handler>
+    </action>
     <currentRowUse>Auto</currentRowUse>
   </formCommands>
   <parameters>

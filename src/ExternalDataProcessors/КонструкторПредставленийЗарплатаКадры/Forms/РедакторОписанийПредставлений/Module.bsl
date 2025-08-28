@@ -1,5 +1,6 @@
 // Copyright (c) 2025 Ilya Fedorov
 // SPDX-License-Identifier: MIT
+// https://github.com/iljyxa/SharedQueryDesignerHRM
 
 #Область ОбработчикиСобытийФормы
 
