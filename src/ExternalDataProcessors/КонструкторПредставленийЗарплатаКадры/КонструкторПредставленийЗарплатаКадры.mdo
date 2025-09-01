@@ -8,7 +8,7 @@
     <key>ru</key>
     <value>Конструктор представлений подсистемы &quot;Зарплата и кадры&quot;</value>
   </synonym>
-  <comment>1.0.1</comment>
+  <comment>1.0.2</comment>
   <containedObjects classId="c3831ec8-d8d5-4f93-8a22-f9bfae07327f" objectId="c94d2278-23ba-4193-bb95-d3108c76e2e0"/>
   <defaultForm>ExternalDataProcessor.КонструкторПредставленийЗарплатаКадры.Form.КонструкторПредставлений</defaultForm>
   <help>
@@ -163,6 +163,20 @@
         <key>ru</key>
         <value>Признак, что строковое значение параметра представляет собой выражение языка запросов. Если признак не установлен, то любое строковое значение будет помещено в &quot;кавычки&quot;.</value>
       </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="baca8591-5b7a-4a6b-a692-9a7f12ccffd6">
+      <name>ДоступныеЗначения</name>
+      <synonym>
+        <key>ru</key>
+        <value>Доступные значения</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
       <fillValue xsi:type="core:UndefinedValue"/>
@@ -348,6 +362,22 @@
       </synonym>
       <type>
         <types>UUID</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="fd0f651e-f21e-4827-b32b-b271a2828c20">
+      <name>Фильтр</name>
+      <synonym>
+        <key>ru</key>
+        <value>Фильтр</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>

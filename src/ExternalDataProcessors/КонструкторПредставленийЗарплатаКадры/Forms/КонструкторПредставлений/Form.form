@@ -1155,6 +1155,10 @@
             <dataPath xsi:type="form:DataPath">
               <segments>Объект.Параметры.Значение</segments>
             </dataPath>
+            <handlers>
+              <event>OnChange</event>
+              <name>ПараметрыЗначениеПриИзменении</name>
+            </handlers>
             <extendedTooltip>
               <name>ПараметрыЗначениеРасширеннаяПодсказка</name>
               <id>221</id>
@@ -1171,14 +1175,18 @@
               <autoFill>true</autoFill>
             </contextMenu>
             <type>InputField</type>
-            <editMode>Enter</editMode>
             <showInHeader>true</showInHeader>
             <headerHorizontalAlign>Left</headerHorizontalAlign>
             <showInFooter>true</showInFooter>
             <extInfo xsi:type="form:InputFieldExtInfo">
+              <handlers>
+                <event>Clearing</event>
+                <name>ПараметрыЗначениеОчистка</name>
+              </handlers>
               <autoMaxWidth>true</autoMaxWidth>
               <autoMaxHeight>true</autoMaxHeight>
               <wrap>true</wrap>
+              <clearButton>true</clearButton>
               <chooseType>true</chooseType>
               <typeDomainEnabled>true</typeDomainEnabled>
               <textEdit>true</textEdit>
@@ -1895,6 +1903,23 @@
           <common>true</common>
         </edit>
       </columns>
+      <columns>
+        <name>СписокВыбора</name>
+        <title>
+          <key>ru</key>
+          <value>Список выбора</value>
+        </title>
+        <id>35</id>
+        <valueType>
+          <types>ValueList</types>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
     </additionalColumns>
     <additionalColumns>
       <tablePath xsi:type="form:DataPath">
@@ -1949,24 +1974,6 @@
           <value>Источник данных</value>
         </title>
         <id>22</id>
-        <valueType>
-          <types>String</types>
-          <stringQualifiers/>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>Фильтр</name>
-        <title>
-          <key>ru</key>
-          <value>Фильтр</value>
-        </title>
-        <id>23</id>
         <valueType>
           <types>String</types>
           <stringQualifiers/>
