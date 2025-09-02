@@ -12,7 +12,7 @@
         <common>true</common>
       </userVisible>
       <dataPath xsi:type="form:DataPath">
-        <segments>Объект.Представления</segments>
+        <segments>Представления</segments>
       </dataPath>
       <defaultItem>true</defaultItem>
       <titleLocation>None</titleLocation>
@@ -25,7 +25,7 @@
           <common>true</common>
         </userVisible>
         <dataPath xsi:type="form:DataPath">
-          <segments>Объект.Представления.Имя</segments>
+          <segments>Представления.Имя</segments>
         </dataPath>
         <extendedTooltip>
           <name>ПредставленияИмяРасширеннаяПодсказка</name>
@@ -372,7 +372,7 @@
             <common>true</common>
           </userVisible>
           <dataPath xsi:type="form:DataPath">
-            <segments>Объект.Поля</segments>
+            <segments>ПоляПредставлений</segments>
           </dataPath>
           <titleLocation>None</titleLocation>
           <items xsi:type="form:FormField">
@@ -388,7 +388,7 @@
               <common>true</common>
             </userVisible>
             <dataPath xsi:type="form:DataPath">
-              <segments>Объект.Поля.Используется</segments>
+              <segments>ПоляПредставлений.Используется</segments>
             </dataPath>
             <toolTip>
               <key>ru</key>
@@ -426,7 +426,7 @@
               <common>true</common>
             </userVisible>
             <dataPath xsi:type="form:DataPath">
-              <segments>Объект.Поля.Имя</segments>
+              <segments>ПоляПредставлений.Имя</segments>
             </dataPath>
             <extendedTooltip>
               <name>ПоляИмяРасширеннаяПодсказка</name>
@@ -466,8 +466,13 @@
               <common>true</common>
             </userVisible>
             <dataPath xsi:type="form:DataPath">
-              <segments>Объект.Поля.Выражение</segments>
+              <segments>ПоляПредставлений.Выражение</segments>
             </dataPath>
+            <toolTip>
+              <key>ru</key>
+              <value>Выражение пустого значения на языке запросов</value>
+            </toolTip>
+            <toolTipRepresentation>Balloon</toolTipRepresentation>
             <extendedTooltip>
               <name>ПоляВыражениеРасширеннаяПодсказка</name>
               <id>283</id>
@@ -656,10 +661,6 @@
             <horizontalAlign>Left</horizontalAlign>
             <autoFill>true</autoFill>
           </autoCommandBar>
-          <handlers>
-            <event>OnActivateRow</event>
-            <name>ПоляПриАктивизацииСтроки</name>
-          </handlers>
           <handlers>
             <event>OnStartEdit</event>
             <name>ПоляПриНачалеРедактирования</name>
@@ -922,7 +923,7 @@
             <common>true</common>
           </userVisible>
           <dataPath xsi:type="form:DataPath">
-            <segments>Объект.Параметры</segments>
+            <segments>ПараметрыПредставлений</segments>
           </dataPath>
           <titleLocation>None</titleLocation>
           <items xsi:type="form:FormField">
@@ -938,7 +939,7 @@
               <common>true</common>
             </userVisible>
             <dataPath xsi:type="form:DataPath">
-              <segments>Объект.Параметры.Используется</segments>
+              <segments>ПараметрыПредставлений.Используется</segments>
             </dataPath>
             <toolTip>
               <key>ru</key>
@@ -980,7 +981,7 @@
               <common>true</common>
             </userVisible>
             <dataPath xsi:type="form:DataPath">
-              <segments>Объект.Параметры.Отбор</segments>
+              <segments>ПараметрыПредставлений.Отбор</segments>
             </dataPath>
             <toolTip>
               <key>ru</key>
@@ -1018,7 +1019,7 @@
               <common>true</common>
             </userVisible>
             <dataPath xsi:type="form:DataPath">
-              <segments>Объект.Параметры.Имя</segments>
+              <segments>ПараметрыПредставлений.Имя</segments>
             </dataPath>
             <extendedTooltip>
               <name>ПараметрыИмяРасширеннаяПодсказка</name>
@@ -1066,7 +1067,7 @@
               <common>true</common>
             </userVisible>
             <dataPath xsi:type="form:DataPath">
-              <segments>Объект.Параметры.ВидСравнения</segments>
+              <segments>ПараметрыПредставлений.ВидСравнения</segments>
             </dataPath>
             <titleLocation>None</titleLocation>
             <extendedTooltip>
@@ -1111,8 +1112,12 @@
               <common>true</common>
             </userVisible>
             <dataPath xsi:type="form:DataPath">
-              <segments>Объект.Параметры.ЗначениеЭтоВыражение</segments>
+              <segments>ПараметрыПредставлений.ЗначениеЭтоВыражение</segments>
             </dataPath>
+            <toolTip>
+              <key>ru</key>
+              <value>Признак, что строковое значение параметра представляет собой выражение языка запросов. Если признак не установлен, то любое строковое значение будет помещено в &quot;кавычки&quot;.</value>
+            </toolTip>
             <toolTipRepresentation>Balloon</toolTipRepresentation>
             <handlers>
               <event>OnChange</event>
@@ -1153,7 +1158,7 @@
               <common>true</common>
             </userVisible>
             <dataPath xsi:type="form:DataPath">
-              <segments>Объект.Параметры.Значение</segments>
+              <segments>ПараметрыПредставлений.Значение</segments>
             </dataPath>
             <handlers>
               <event>OnChange</event>
@@ -1511,10 +1516,6 @@
             <chooseType>true</chooseType>
             <typeDomainEnabled>true</typeDomainEnabled>
             <textEdit>true</textEdit>
-            <inputHint>
-              <key>ru</key>
-              <value>Постфикс к наименованию временной таблицы</value>
-            </inputHint>
           </extInfo>
         </items>
         <visible>true</visible>
@@ -1541,70 +1542,6 @@
           <picture xsi:type="core:PictureRef">
             <picture>StdPicture.Parameters</picture>
           </picture>
-          <group>Vertical</group>
-          <showTitle>true</showTitle>
-          <titleDataPath xsi:type="form:DataPath">
-            <segments>ДанныеЗаголовкаПараметров</segments>
-          </titleDataPath>
-        </extInfo>
-      </items>
-      <items xsi:type="form:FormGroup">
-        <name>СтраницаСправка</name>
-        <id>319</id>
-        <items xsi:type="form:Decoration">
-          <name>НадписьСправочнаяИнформация</name>
-          <id>321</id>
-          <title>
-            <key>ru</key>
-            <value>Надпись справочная информация</value>
-          </title>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <extendedTooltip>
-            <name>НадписьСправочнаяИнформацияРасширеннаяПодсказка</name>
-            <id>323</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <contextMenu>
-            <name>НадписьСправочнаяИнформацияКонтекстноеМеню</name>
-            <id>322</id>
-            <autoFill>true</autoFill>
-          </contextMenu>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </items>
-        <enabled>true</enabled>
-        <userVisible>
-          <common>true</common>
-        </userVisible>
-        <title>
-          <key>ru</key>
-          <value>Справка</value>
-        </title>
-        <extendedTooltip>
-          <name>СтраницаСправкаРасширеннаяПодсказка</name>
-          <id>320</id>
-          <type>Label</type>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <extInfo xsi:type="form:LabelDecorationExtInfo">
-            <horizontalAlign>Left</horizontalAlign>
-          </extInfo>
-        </extendedTooltip>
-        <type>Page</type>
-        <extInfo xsi:type="form:PageGroupExtInfo">
           <group>Vertical</group>
           <showTitle>true</showTitle>
         </extInfo>
@@ -1806,178 +1743,6 @@
       <common>true</common>
     </edit>
     <main>true</main>
-    <additionalColumns>
-      <tablePath xsi:type="form:DataPath">
-        <segments>Объект.Параметры</segments>
-      </tablePath>
-      <columns>
-        <name>Типы</name>
-        <title>
-          <key>ru</key>
-          <value>Типы</value>
-        </title>
-        <id>18</id>
-        <valueType>
-          <types>TypeDescription</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>Используется</name>
-        <title>
-          <key>ru</key>
-          <value>Используется</value>
-        </title>
-        <id>20</id>
-        <valueType>
-          <types>Boolean</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>Отбор</name>
-        <title>
-          <key>ru</key>
-          <value>Отбор</value>
-        </title>
-        <id>25</id>
-        <valueType>
-          <types>Boolean</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>ВидСравнения</name>
-        <title>
-          <key>ru</key>
-          <value>Вид сравнения</value>
-        </title>
-        <id>26</id>
-        <valueType>
-          <types>DataCompositionComparisonType</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>СписокВыбора</name>
-        <title>
-          <key>ru</key>
-          <value>Список выбора</value>
-        </title>
-        <id>35</id>
-        <valueType>
-          <types>ValueList</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-    </additionalColumns>
-    <additionalColumns>
-      <tablePath xsi:type="form:DataPath">
-        <segments>Объект.Поля</segments>
-      </tablePath>
-      <columns>
-        <name>Используется</name>
-        <title>
-          <key>ru</key>
-          <value>Используется</value>
-        </title>
-        <id>19</id>
-        <valueType>
-          <types>Boolean</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-    </additionalColumns>
-    <additionalColumns>
-      <tablePath xsi:type="form:DataPath">
-        <segments>Объект.Представления</segments>
-      </tablePath>
-      <columns>
-        <name>Уточнение</name>
-        <title>
-          <key>ru</key>
-          <value>Уточнение</value>
-        </title>
-        <id>21</id>
-        <valueType>
-          <types>String</types>
-          <stringQualifiers>
-            <length>50</length>
-          </stringQualifiers>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>ИсточникДанных</name>
-        <title>
-          <key>ru</key>
-          <value>Источник данных</value>
-        </title>
-        <id>22</id>
-        <valueType>
-          <types>String</types>
-          <stringQualifiers/>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-      <columns>
-        <name>ЕстьНезаполненныеОбязательныеПараметры</name>
-        <title>
-          <key>ru</key>
-          <value>Есть незаполненные обязательные параметры</value>
-        </title>
-        <id>29</id>
-        <valueType>
-          <types>Boolean</types>
-        </valueType>
-        <view>
-          <common>true</common>
-        </view>
-        <edit>
-          <common>true</common>
-        </edit>
-      </columns>
-    </additionalColumns>
   </attributes>
   <attributes>
     <name>ОтображатьТолькоИспользуемыеПоляИПараметры</name>
@@ -2035,15 +1800,14 @@
     </edit>
   </attributes>
   <attributes>
-    <name>ДанныеЗаголовкаПараметров</name>
+    <name>ПараметрыПредставлений</name>
     <title>
       <key>ru</key>
-      <value>Данные заголовка параметров</value>
+      <value>Параметры представлений</value>
     </title>
-    <id>34</id>
+    <id>44</id>
     <valueType>
-      <types>String</types>
-      <stringQualifiers/>
+      <types>ValueTable</types>
     </valueType>
     <view>
       <common>true</common>
@@ -2051,6 +1815,535 @@
     <edit>
       <common>true</common>
     </edit>
+    <columns>
+      <name>Имя</name>
+      <title>
+        <key>ru</key>
+        <value>Имя</value>
+      </title>
+      <id>45</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Значение</name>
+      <title>
+        <key>ru</key>
+        <value>Значение</value>
+      </title>
+      <id>46</id>
+      <valueType>
+        <types>Boolean</types>
+        <types>String</types>
+        <types>Date</types>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>25</precision>
+          <scale>10</scale>
+        </numberQualifiers>
+        <stringQualifiers/>
+        <dateQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Обязательный</name>
+      <title>
+        <key>ru</key>
+        <value>Обязательный</value>
+      </title>
+      <id>47</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ИдентификаторПредставления</name>
+      <title>
+        <key>ru</key>
+        <value>Идентификатор представления</value>
+      </title>
+      <id>48</id>
+      <valueType>
+        <types>UUID</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Описание</name>
+      <title>
+        <key>ru</key>
+        <value>Описание</value>
+      </title>
+      <id>49</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ЗначениеЭтоВыражение</name>
+      <title>
+        <key>ru</key>
+        <value>Значение это выражение</value>
+      </title>
+      <id>50</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ДоступныеТипы</name>
+      <title>
+        <key>ru</key>
+        <value>Доступные типы</value>
+      </title>
+      <id>55</id>
+      <valueType>
+        <types>TypeDescription</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Используется</name>
+      <title>
+        <key>ru</key>
+        <value>Используется</value>
+      </title>
+      <id>56</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Отбор</name>
+      <title>
+        <key>ru</key>
+        <value>Отбор</value>
+      </title>
+      <id>57</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ВидСравнения</name>
+      <title>
+        <key>ru</key>
+        <value>Вид сравнения</value>
+      </title>
+      <id>58</id>
+      <valueType>
+        <types>DataCompositionComparisonType</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>СписокВыбора</name>
+      <title>
+        <key>ru</key>
+        <value>Список выбора</value>
+      </title>
+      <id>59</id>
+      <valueType>
+        <types>ValueList</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>ПоляПредставлений</name>
+    <title>
+      <key>ru</key>
+      <value>Поля представлений</value>
+    </title>
+    <id>60</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Имя</name>
+      <title>
+        <key>ru</key>
+        <value>Имя</value>
+      </title>
+      <id>61</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Выражение</name>
+      <title>
+        <key>ru</key>
+        <value>Выражение</value>
+      </title>
+      <id>62</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Описание</name>
+      <title>
+        <key>ru</key>
+        <value>Описание</value>
+      </title>
+      <id>63</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ИдентификаторПредставления</name>
+      <title>
+        <key>ru</key>
+        <value>Идентификатор представления</value>
+      </title>
+      <id>64</id>
+      <valueType>
+        <types>UUID</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Используется</name>
+      <title>
+        <key>ru</key>
+        <value>Используется</value>
+      </title>
+      <id>65</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+  </attributes>
+  <attributes>
+    <name>Представления</name>
+    <title>
+      <key>ru</key>
+      <value>Представления</value>
+    </title>
+    <id>66</id>
+    <valueType>
+      <types>ValueTable</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <columns>
+      <name>Имя</name>
+      <title>
+        <key>ru</key>
+        <value>Имя</value>
+      </title>
+      <id>67</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Подсистема</name>
+      <title>
+        <key>ru</key>
+        <value>Подсистема</value>
+      </title>
+      <id>68</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ЕстьИсточникДанных</name>
+      <title>
+        <key>ru</key>
+        <value>Есть источник данных</value>
+      </title>
+      <id>69</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ЕстьФильтр</name>
+      <title>
+        <key>ru</key>
+        <value>Есть фильтр</value>
+      </title>
+      <id>70</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ФильтрОбязателен</name>
+      <title>
+        <key>ru</key>
+        <value>Фильтр обязателен</value>
+      </title>
+      <id>71</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ДоступныОтборы</name>
+      <title>
+        <key>ru</key>
+        <value>Доступны отборы</value>
+      </title>
+      <id>72</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Описание</name>
+      <title>
+        <key>ru</key>
+        <value>Описание</value>
+      </title>
+      <id>73</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers/>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ИдентификаторПредставления</name>
+      <title>
+        <key>ru</key>
+        <value>Идентификатор представления</value>
+      </title>
+      <id>74</id>
+      <valueType>
+        <types>UUID</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Фильтр</name>
+      <title>
+        <key>ru</key>
+        <value>Фильтр</value>
+      </title>
+      <id>75</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>ИсточникДанных</name>
+      <title>
+        <key>ru</key>
+        <value>Источник данных</value>
+      </title>
+      <id>76</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
+      <name>Уточнение</name>
+      <title>
+        <key>ru</key>
+        <value>Уточнение</value>
+      </title>
+      <id>77</id>
+      <valueType>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
   </attributes>
   <formCommands>
     <name>ТолькоИспользуемые</name>
