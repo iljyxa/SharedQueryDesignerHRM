@@ -8,7 +8,7 @@
 		</selection>
 		<filter>
 			<item xsi:type="FilterItemComparison">
-				<left xsi:type="dcscor:Field">Объект.Параметры.Обязательный</left>
+				<left xsi:type="dcscor:Field">ПараметрыПредставлений.Обязательный</left>
 				<comparisonType>Equal</comparisonType>
 				<right xsi:type="xs:boolean">true</right>
 			</item>
@@ -39,7 +39,7 @@
 		</selection>
 		<filter>
 			<item xsi:type="FilterItemComparison">
-				<left xsi:type="dcscor:Field">Объект.Параметры.Отбор</left>
+				<left xsi:type="dcscor:Field">ПараметрыПредставлений.Отбор</left>
 				<comparisonType>Equal</comparisonType>
 				<right xsi:type="xs:boolean">false</right>
 			</item>
@@ -78,7 +78,7 @@
 		</selection>
 		<filter>
 			<item xsi:type="FilterItemComparison">
-				<left xsi:type="dcscor:Field">Объект.Представления.ДоступныОтборы</left>
+				<left xsi:type="dcscor:Field">Представления.ДоступныОтборы</left>
 				<comparisonType>Equal</comparisonType>
 				<right xsi:type="xs:boolean">false</right>
 			</item>
