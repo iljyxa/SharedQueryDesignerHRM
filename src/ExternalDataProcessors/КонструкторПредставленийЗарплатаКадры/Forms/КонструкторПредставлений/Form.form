@@ -1717,31 +1717,6 @@
       <representationInContextMenu>Auto</representationInContextMenu>
     </items>
     <items xsi:type="form:Button">
-      <name>ФормаРедакторОписаний</name>
-      <id>98</id>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>ФормаРедакторОписанийРасширеннаяПодсказка</name>
-        <id>99</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <commandName>Form.Command.РедакторОписаний</commandName>
-      <representation>Auto</representation>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-      <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
-    </items>
-    <items xsi:type="form:Button">
       <name>ФормаСброситьТекущиеНастройки</name>
       <id>324</id>
       <visible>true</visible>
@@ -2077,26 +2052,6 @@
       <common>true</common>
     </edit>
   </attributes>
-  <formCommands>
-    <name>РедакторОписаний</name>
-    <title>
-      <key>ru</key>
-      <value>Открыть редактор описаний</value>
-    </title>
-    <id>3</id>
-    <use>
-      <common>true</common>
-    </use>
-    <picture xsi:type="core:PictureRef">
-      <picture>StdPicture.DataCompositionSettingsWizard</picture>
-    </picture>
-    <action xsi:type="form:FormCommandHandlerContainer">
-      <handler>
-        <name>РедакторОписаний</name>
-      </handler>
-    </action>
-    <currentRowUse>Auto</currentRowUse>
-  </formCommands>
   <formCommands>
     <name>ТолькоИспользуемые</name>
     <title>
