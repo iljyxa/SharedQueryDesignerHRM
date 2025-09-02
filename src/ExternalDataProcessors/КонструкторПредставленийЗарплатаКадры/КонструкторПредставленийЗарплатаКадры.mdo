@@ -393,15 +393,6 @@
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
   </forms>
-  <forms uuid="dc0d9db8-780c-445b-8c8c-748e967d8368">
-    <name>РедакторОписанийПредставлений</name>
-    <synonym>
-      <key>ru</key>
-      <value>Редактор описаний представлений</value>
-    </synonym>
-    <usePurposes>PersonalComputer</usePurposes>
-    <usePurposes>MobileDevice</usePurposes>
-  </forms>
   <forms uuid="19a2bfe0-defe-4d70-b9ce-ce498ac420b8">
     <name>ТекстЗапроса</name>
     <synonym>
