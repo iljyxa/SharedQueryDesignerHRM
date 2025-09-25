@@ -8,7 +8,7 @@
     <key>ru</key>
     <value>Конструктор представлений подсистемы &quot;Зарплата и кадры&quot;</value>
   </synonym>
-  <comment>1.0.3</comment>
+  <comment>1.1.0</comment>
   <containedObjects classId="c3831ec8-d8d5-4f93-8a22-f9bfae07327f" objectId="c94d2278-23ba-4193-bb95-d3108c76e2e0"/>
   <defaultForm>ExternalDataProcessor.КонструкторПредставленийЗарплатаКадры.Form.КонструкторПредставлений</defaultForm>
   <help>
