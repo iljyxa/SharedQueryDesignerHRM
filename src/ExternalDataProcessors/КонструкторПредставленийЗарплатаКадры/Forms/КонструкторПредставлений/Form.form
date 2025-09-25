@@ -1116,7 +1116,8 @@
             </dataPath>
             <toolTip>
               <key>ru</key>
-              <value>Признак, что строковое значение параметра представляет собой выражение языка запросов. Если признак не установлен, то любое строковое значение будет помещено в &quot;кавычки&quot;.</value>
+              <value>Признак, что строковое значение параметра представляет собой выражение языка запросов. Если признак не установлен, то любое строковое значение будет помещено в &quot;кавычки&quot;.
+Механизм представлений не различает строковые параметры от, например, числовых, поэтому данное свойство предназначено для формирования синтаксически и логически корректного текста запроса.</value>
             </toolTip>
             <toolTipRepresentation>Balloon</toolTipRepresentation>
             <handlers>
@@ -1648,6 +1649,31 @@
       <commandName>Form.Command.ПоказатьТекстЗапроса</commandName>
       <representation>Auto</representation>
       <defaultButton>true</defaultButton>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <items xsi:type="form:Button">
+      <name>ФормаИмпортПредставленияИзТекстаЗапроса</name>
+      <id>337</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаИмпортПредставленияИзТекстаЗапросаРасширеннаяПодсказка</name>
+        <id>338</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.ИмпортПредставленияИзТекстаЗапроса</commandName>
+      <representation>Auto</representation>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <placementArea>UserCmds</placementArea>
@@ -2345,6 +2371,23 @@
       </edit>
     </columns>
   </attributes>
+  <attributes>
+    <name>ОписаниеТипаВсеТипыПараметраПредставления</name>
+    <title>
+      <key>ru</key>
+      <value>Описание типа все типы параметра представления</value>
+    </title>
+    <id>79</id>
+    <valueType>
+      <types>TypeDescription</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
   <formCommands>
     <name>ТолькоИспользуемые</name>
     <title>
@@ -2459,7 +2502,7 @@
     <id>12</id>
     <toolTip>
       <key>ru</key>
-      <value>Выполняет повторную инициализацию всех описаний, возвращая к исходному состоянию - как при открытии</value>
+      <value>Выполняет повторную инициализацию всех описаний и считывая их по данным конфигурации.</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -2533,10 +2576,39 @@
     </action>
     <currentRowUse>Auto</currentRowUse>
   </formCommands>
+  <formCommands>
+    <name>ИмпортПредставленияИзТекстаЗапроса</name>
+    <title>
+      <key>ru</key>
+      <value>Вставить из текста запроса</value>
+    </title>
+    <id>22</id>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.ShowInList</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ИмпортПредставленияИзТекстаЗапроса</name>
+      </handler>
+    </action>
+    <representation>TextPicture</representation>
+    <currentRowUse>Auto</currentRowUse>
+  </formCommands>
   <parameters>
     <name>РежимВставки</name>
     <valueType>
       <types>Boolean</types>
+    </valueType>
+    <keyParameter>true</keyParameter>
+  </parameters>
+  <parameters>
+    <name>ТекстЗапроса</name>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
     </valueType>
     <keyParameter>true</keyParameter>
   </parameters>
