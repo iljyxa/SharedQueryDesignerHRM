@@ -1709,6 +1709,32 @@
       <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
     </items>
     <items xsi:type="form:Button">
+      <name>ФормаСброситьКэшОписанийПредставлений</name>
+      <id>339</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаСброситьКэшОписанийПредставленийРасширеннаяПодсказка</name>
+        <id>340</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.СброситьКэшОписанийПредставлений</commandName>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+      <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
+    </items>
+    <items xsi:type="form:Button">
       <name>ФормаСтраницаПроекта</name>
       <id>332</id>
       <title>
@@ -2505,6 +2531,23 @@
           <common>true</common>
         </edit>
       </columns>
+      <columns>
+        <name>УдалятьСтрокуСПустымПараметром</name>
+        <title>
+          <key>ru</key>
+          <value>Удалять строку с пустым параметром</value>
+        </title>
+        <id>90</id>
+        <valueType>
+          <types>Boolean</types>
+        </valueType>
+        <view>
+          <common>true</common>
+        </view>
+        <edit>
+          <common>true</common>
+        </edit>
+      </columns>
     </additionalColumns>
   </attributes>
   <attributes>
@@ -2638,7 +2681,7 @@
     <id>12</id>
     <toolTip>
       <key>ru</key>
-      <value>Выполняет повторную инициализацию всех описаний и считывая их по данным конфигурации.</value>
+      <value>Устанавливает поля, параметры, значения по умолчанию во всех представлениях.</value>
     </toolTip>
     <use>
       <common>true</common>
@@ -2731,6 +2774,30 @@
       </handler>
     </action>
     <representation>TextPicture</representation>
+    <currentRowUse>Auto</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>СброситьКэшОписанийПредставлений</name>
+    <title>
+      <key>ru</key>
+      <value>Сбросить кэш описаний представлений</value>
+    </title>
+    <id>23</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Удаляет кэш описаний и перезаполняет представления по данным конфигурации.</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.QueryWizardCreateTempTableDropQuery</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>СброситьКэшОписанийПредставлений</name>
+      </handler>
+    </action>
     <currentRowUse>Auto</currentRowUse>
   </formCommands>
   <parameters>
