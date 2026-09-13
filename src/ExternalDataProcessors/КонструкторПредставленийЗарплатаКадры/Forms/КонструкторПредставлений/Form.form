@@ -898,10 +898,6 @@
           <items xsi:type="form:FormField">
             <name>ПоляОписаниеПоля</name>
             <id>358</id>
-            <title>
-              <key>ru</key>
-              <value>Поле1</value>
-            </title>
             <visible>true</visible>
             <enabled>true</enabled>
             <userVisible>
@@ -1844,10 +1840,6 @@
       <items xsi:type="form:FormField">
         <name>ПредставленияОписаниеПредставления</name>
         <id>361</id>
-        <title>
-          <key>ru</key>
-          <value>Представления описание представления</value>
-        </title>
         <visible>true</visible>
         <enabled>true</enabled>
         <userVisible>
