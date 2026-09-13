@@ -236,6 +236,7 @@
       </contextMenu>
       <changeRowSet>true</changeRowSet>
       <changeRowOrder>true</changeRowOrder>
+      <width>35</width>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
       <autoMaxRowsCount>true</autoMaxRowsCount>
@@ -265,6 +266,7 @@
       <key>ru</key>
       <value>Левая</value>
     </title>
+    <horizontalStretch>false</horizontalStretch>
     <extendedTooltip>
       <name>ГруппаЛеваяРасширеннаяПодсказка</name>
       <id>21</id>
@@ -340,7 +342,7 @@
           </userVisible>
           <title>
             <key>ru</key>
-            <value>Группа подсказка полей</value>
+            <value>Подсказка полей</value>
           </title>
           <extendedTooltip>
             <name>ГруппаПодсказкаПолейРасширеннаяПодсказка</name>
@@ -493,6 +495,46 @@
             </contextMenu>
             <type>InputField</type>
             <editMode>Enter</editMode>
+            <showInHeader>true</showInHeader>
+            <headerHorizontalAlign>Left</headerHorizontalAlign>
+            <showInFooter>true</showInFooter>
+            <extInfo xsi:type="form:InputFieldExtInfo">
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <wrap>true</wrap>
+              <chooseType>true</chooseType>
+              <typeDomainEnabled>true</typeDomainEnabled>
+              <textEdit>true</textEdit>
+            </extInfo>
+          </items>
+          <items xsi:type="form:FormField">
+            <name>ПоляОписание</name>
+            <id>350</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <dataPath xsi:type="form:DataPath">
+              <segments>ПоляПредставлений.Описание</segments>
+            </dataPath>
+            <extendedTooltip>
+              <name>ПоляОписаниеРасширеннаяПодсказка</name>
+              <id>352</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>ПоляОписаниеКонтекстноеМеню</name>
+              <id>351</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <type>InputField</type>
+            <editMode>EnterOnInput</editMode>
             <showInHeader>true</showInHeader>
             <headerHorizontalAlign>Left</headerHorizontalAlign>
             <showInFooter>true</showInFooter>
@@ -788,6 +830,45 @@
           <name>ГруппаОписаниеПоля</name>
           <id>405</id>
           <items xsi:type="form:Decoration">
+            <name>КартинкаОписаниеПоля</name>
+            <id>344</id>
+            <title>
+              <key>ru</key>
+              <value>Картинка описание поля</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>КартинкаОписаниеПоляРасширеннаяПодсказка</name>
+              <id>346</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>КартинкаОписаниеПоляКонтекстноеМеню</name>
+              <id>345</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <width>2</width>
+            <autoMaxWidth>true</autoMaxWidth>
+            <height>1</height>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:PictureDecorationExtInfo">
+              <picture xsi:type="core:PictureRef">
+                <picture>StdPicture.DialogInformation</picture>
+              </picture>
+              <pictureSize>AutoSize</pictureSize>
+              <fileDragMode>AsFileRef</fileDragMode>
+            </extInfo>
+          </items>
+          <items xsi:type="form:Decoration">
             <name>НадписьОписаниеПоля</name>
             <id>407</id>
             <visible>true</visible>
@@ -815,14 +896,14 @@
             <horizontalStretch>true</horizontalStretch>
             <extInfo xsi:type="form:LabelDecorationExtInfo"/>
           </items>
-          <visible>false</visible>
+          <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
             <common>true</common>
           </userVisible>
           <title>
             <key>ru</key>
-            <value>Группа описание поля</value>
+            <value>Описание поля</value>
           </title>
           <extendedTooltip>
             <name>ГруппаОписаниеПоляРасширеннаяПодсказка</name>
@@ -841,9 +922,6 @@
             <behavior>Auto</behavior>
             <showLeftMargin>true</showLeftMargin>
             <united>true</united>
-            <backColor xsi:type="core:ColorRef">
-              <color>Windows.ToolTip</color>
-            </backColor>
             <throughAlign>Auto</throughAlign>
             <currentRowUse>Auto</currentRowUse>
           </extInfo>
@@ -1575,14 +1653,13 @@
             <horizontalStretch>true</horizontalStretch>
             <extInfo xsi:type="form:LabelDecorationExtInfo"/>
           </items>
-          <visible>false</visible>
           <enabled>true</enabled>
           <userVisible>
             <common>true</common>
           </userVisible>
           <title>
             <key>ru</key>
-            <value>Группа описание параметра</value>
+            <value>Описание параметра</value>
           </title>
           <extendedTooltip>
             <name>ГруппаОписаниеПараметраРасширеннаяПодсказка</name>
@@ -1601,9 +1678,6 @@
             <behavior>Auto</behavior>
             <showLeftMargin>true</showLeftMargin>
             <united>true</united>
-            <backColor xsi:type="core:ColorRef">
-              <color>Windows.ToolTip</color>
-            </backColor>
             <throughAlign>Auto</throughAlign>
             <currentRowUse>Auto</currentRowUse>
           </extInfo>
@@ -1738,14 +1812,13 @@
         <horizontalStretch>true</horizontalStretch>
         <extInfo xsi:type="form:LabelDecorationExtInfo"/>
       </items>
-      <visible>false</visible>
       <enabled>true</enabled>
       <userVisible>
         <common>true</common>
       </userVisible>
       <title>
         <key>ru</key>
-        <value>Группа описание представления</value>
+        <value>Описание</value>
       </title>
       <extendedTooltip>
         <name>ГруппаОписаниеПредставленияРасширеннаяПодсказка</name>
@@ -1761,12 +1834,14 @@
       <extInfo xsi:type="form:UsualGroupExtInfo">
         <group>HorizontalIfPossible</group>
         <verticalAlign>Center</verticalAlign>
-        <behavior>Auto</behavior>
+        <behavior>Collapsible</behavior>
+        <collapsed>true</collapsed>
         <showLeftMargin>true</showLeftMargin>
         <united>true</united>
-        <backColor xsi:type="core:ColorRef">
-          <color>Windows.ToolTip</color>
-        </backColor>
+        <showTitle>true</showTitle>
+        <titleDataPath xsi:type="form:DataPath">
+          <segments>Items.Представления.CurrentData.Имя</segments>
+        </titleDataPath>
         <throughAlign>Auto</throughAlign>
         <currentRowUse>Auto</currentRowUse>
       </extInfo>
