@@ -64,6 +64,32 @@
         <name>ПредставленияКоманднаяПанель</name>
         <id>107</id>
         <items xsi:type="form:Button">
+          <name>ПредставленияПоказыватьВсе</name>
+          <id>415</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ПредставленияПоказыватьВсеРасширеннаяПодсказка</name>
+            <id>416</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.ПоказыватьВсеПредставления</commandName>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+          <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
+        </items>
+        <items xsi:type="form:Button">
           <name>ПредставленияДобавить</name>
           <id>271</id>
           <visible>true</visible>
@@ -88,31 +114,6 @@
           <placementArea>UserCmds</placementArea>
           <representationInContextMenu>Auto</representationInContextMenu>
           <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
-        </items>
-        <items xsi:type="form:Button">
-          <name>ПредставленияПоказыватьВсе</name>
-          <id>415</id>
-          <visible>true</visible>
-          <enabled>true</enabled>
-          <userVisible>
-            <common>true</common>
-          </userVisible>
-          <extendedTooltip>
-            <name>ПредставленияПоказыватьВсеРасширеннаяПодсказка</name>
-            <id>416</id>
-            <type>Label</type>
-            <autoMaxWidth>true</autoMaxWidth>
-            <autoMaxHeight>true</autoMaxHeight>
-            <extInfo xsi:type="form:LabelDecorationExtInfo">
-              <horizontalAlign>Left</horizontalAlign>
-            </extInfo>
-          </extendedTooltip>
-          <commandName>Form.Command.ПоказыватьВсеПредставления</commandName>
-          <representation>Auto</representation>
-          <autoMaxWidth>true</autoMaxWidth>
-          <autoMaxHeight>true</autoMaxHeight>
-          <placementArea>UserCmds</placementArea>
-          <representationInContextMenu>Auto</representationInContextMenu>
         </items>
         <items xsi:type="form:Button">
           <name>ПредставленияПереместитьВверх</name>
@@ -2073,7 +2074,6 @@
     <name>ПриСозданииНаСервере</name>
   </handlers>
   <autoSaveDataInSettings>Use</autoSaveDataInSettings>
-  <saveDataInSettings>Use</saveDataInSettings>
   <saveWindowSettings>true</saveWindowSettings>
   <autoUrl>true</autoUrl>
   <group>AlwaysHorizontal</group>
@@ -2112,6 +2112,9 @@
     <edit>
       <common>true</common>
     </edit>
+    <settingsSavedData xsi:type="form:DataPath">
+      <segments>ОтображатьВсеПредставления</segments>
+    </settingsSavedData>
     <savedData>true</savedData>
   </attributes>
   <attributes>
