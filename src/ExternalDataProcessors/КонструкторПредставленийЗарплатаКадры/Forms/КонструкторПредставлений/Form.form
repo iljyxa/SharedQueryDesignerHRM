@@ -90,6 +90,31 @@
           <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
         </items>
         <items xsi:type="form:Button">
+          <name>ПредставленияПоказыватьВсе</name>
+          <id>415</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <extendedTooltip>
+            <name>ПредставленияПоказыватьВсеРасширеннаяПодсказка</name>
+            <id>416</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <commandName>Form.Command.ПоказыватьВсеПредставления</commandName>
+          <representation>Auto</representation>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <placementArea>UserCmds</placementArea>
+          <representationInContextMenu>Auto</representationInContextMenu>
+        </items>
+        <items xsi:type="form:Button">
           <name>ПредставленияПереместитьВверх</name>
           <id>267</id>
           <visible>true</visible>
@@ -2047,6 +2072,8 @@
     <event>OnCreateAtServer</event>
     <name>ПриСозданииНаСервере</name>
   </handlers>
+  <autoSaveDataInSettings>Use</autoSaveDataInSettings>
+  <saveDataInSettings>Use</saveDataInSettings>
   <saveWindowSettings>true</saveWindowSettings>
   <autoUrl>true</autoUrl>
   <group>AlwaysHorizontal</group>
@@ -2068,6 +2095,24 @@
       <common>true</common>
     </edit>
     <main>true</main>
+  </attributes>
+  <attributes>
+    <name>ОтображатьВсеПредставления</name>
+    <title>
+      <key>ru</key>
+      <value>Отображать все представления</value>
+    </title>
+    <id>92</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <savedData>true</savedData>
   </attributes>
   <attributes>
     <name>ОтображатьТолькоИспользуемыеПоляИПараметры</name>
@@ -2575,6 +2620,23 @@
       </edit>
     </columns>
     <columns>
+      <name>Основное</name>
+      <title>
+        <key>ru</key>
+        <value>Основное</value>
+      </title>
+      <id>91</id>
+      <valueType>
+        <types>Boolean</types>
+      </valueType>
+      <view>
+        <common>true</common>
+      </view>
+      <edit>
+        <common>true</common>
+      </edit>
+    </columns>
+    <columns>
       <name>Описание</name>
       <title>
         <key>ru</key>
@@ -2838,6 +2900,27 @@
       <common>true</common>
     </edit>
   </attributes>
+  <formCommands>
+    <name>ПоказыватьВсеПредставления</name>
+    <title>
+      <key>ru</key>
+      <value>Показывать все</value>
+    </title>
+    <id>24</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Отображать все доступные представления, а не только основные</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ПоказыватьВсеПредставления</name>
+      </handler>
+    </action>
+    <currentRowUse>Auto</currentRowUse>
+  </formCommands>
   <formCommands>
     <name>ТолькоИспользуемые</name>
     <title>
