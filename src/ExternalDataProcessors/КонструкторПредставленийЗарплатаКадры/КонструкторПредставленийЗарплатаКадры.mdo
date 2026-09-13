@@ -10,6 +10,11 @@
   </synonym>
   <comment>1.2.0</comment>
   <containedObjects classId="c3831ec8-d8d5-4f93-8a22-f9bfae07327f" objectId="c94d2278-23ba-4193-bb95-d3108c76e2e0"/>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
   <defaultForm>ExternalDataProcessor.КонструкторПредставленийЗарплатаКадры.Form.КонструкторПредставлений</defaultForm>
   <forms uuid="659c9174-659e-472f-90fa-5b0cb8cb5f32">
     <name>КонструкторПредставлений</name>
@@ -17,6 +22,11 @@
       <key>ru</key>
       <value>Конструктор представлений</value>
     </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
   </forms>
@@ -26,6 +36,11 @@
       <key>ru</key>
       <value>Текст запроса</value>
     </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
   </forms>
