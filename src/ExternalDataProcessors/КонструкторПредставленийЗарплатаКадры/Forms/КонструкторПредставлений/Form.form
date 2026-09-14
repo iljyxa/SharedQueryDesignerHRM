@@ -2072,6 +2072,32 @@
       <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
     </items>
     <items xsi:type="form:Button">
+      <name>ФормаВыгрузитьОписанияПредставленийВJSON</name>
+      <id>417</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ФормаВыгрузитьОписанияПредставленийВJSONРасширеннаяПодсказка</name>
+        <id>418</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.ВыгрузитьОписанияПредставленийВJSON</commandName>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+      <locationInCommandBar>InAdditionalSubmenu</locationInCommandBar>
+    </items>
+    <items xsi:type="form:Button">
       <name>ФормаСтраницаПроекта</name>
       <id>332</id>
       <title>
@@ -3193,6 +3219,30 @@
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
         <name>СброситьКэшОписанийПредставлений</name>
+      </handler>
+    </action>
+    <currentRowUse>Auto</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ВыгрузитьОписанияПредставленийВJSON</name>
+    <title>
+      <key>ru</key>
+      <value>Выгрузить описания представлений в JSON</value>
+    </title>
+    <id>25</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Формирует описания представлений по конфигурации и сохраняет их в JSON-файлы выбранного каталога на компьютере пользователя.</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.SaveFile</picture>
+    </picture>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ВыгрузитьОписанияПредставленийВJSON</name>
       </handler>
     </action>
     <currentRowUse>Auto</currentRowUse>
