@@ -1665,6 +1665,45 @@
         <items xsi:type="form:FormGroup">
           <name>ГруппаОписаниеПараметра</name>
           <id>410</id>
+          <items xsi:type="form:Decoration">
+            <name>КартинкаОписаниеПараметра</name>
+            <id>367</id>
+            <title>
+              <key>ru</key>
+              <value>Картинка описание поля</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>КартинкаОписаниеПараметраРасширеннаяПодсказка</name>
+              <id>369</id>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <contextMenu>
+              <name>КартинкаОписаниеПараметраКонтекстноеМеню</name>
+              <id>368</id>
+              <autoFill>true</autoFill>
+            </contextMenu>
+            <width>2</width>
+            <autoMaxWidth>true</autoMaxWidth>
+            <height>1</height>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:PictureDecorationExtInfo">
+              <picture xsi:type="core:PictureRef">
+                <picture>StdPicture.DialogInformation</picture>
+              </picture>
+              <pictureSize>AutoSize</pictureSize>
+              <fileDragMode>AsFileRef</fileDragMode>
+            </extInfo>
+          </items>
           <items xsi:type="form:FormField">
             <name>ПараметрыОписание</name>
             <id>364</id>
@@ -1706,6 +1745,7 @@
               </border>
             </extInfo>
           </items>
+          <visible>true</visible>
           <enabled>true</enabled>
           <userVisible>
             <common>true</common>
@@ -1727,7 +1767,7 @@
           <type>UsualGroup</type>
           <extInfo xsi:type="form:UsualGroupExtInfo">
             <group>HorizontalIfPossible</group>
-            <verticalAlign>Center</verticalAlign>
+            <verticalAlign>Top</verticalAlign>
             <behavior>Auto</behavior>
             <showLeftMargin>true</showLeftMargin>
             <united>true</united>
@@ -1870,9 +1910,9 @@
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
         <extInfo xsi:type="form:LabelFieldExtInfo">
-          <maxWidth>120</maxWidth>
-          <height>4</height>
-          <maxHeight>4</maxHeight>
+          <maxWidth>140</maxWidth>
+          <height>10</height>
+          <maxHeight>10</maxHeight>
           <border xsi:type="core:BorderDef">
             <width>1</width>
           </border>
