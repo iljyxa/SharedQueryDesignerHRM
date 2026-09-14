@@ -44,6 +44,14 @@
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
   </forms>
+  <templates uuid="1e0a6f56-d1ce-4f66-ae48-36f804a2af1c">
+    <name>ТекстовоеОписаниеБухучетЗарплатыСотрудников</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текстовое описание БухучетЗарплатыСотрудников</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
   <templates uuid="63ff1b96-bdfd-4611-b6ac-fb08e26e24c0">
     <name>ТекстовоеОписаниеДанныеУчетаВремениИСостоянийСотрудников</name>
     <synonym>
@@ -65,6 +73,30 @@
     <synonym>
       <key>ru</key>
       <value>Текстовое описание КадровыеДанныеФизическихЛиц</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="ec46652c-465f-4f4b-8631-6181b1282f50">
+    <name>ТекстовоеОписаниеЛичныеДанныеКандидатов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текстовое описание ЛичныеДанныеКандидатов</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="26c5d00c-8705-47eb-9282-36c70f3d60f4">
+    <name>ТекстовоеОписаниеНачисленныеДоходыНДФЛ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текстовое описание НачисленныеДоходыНДФЛ</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="4da64ffa-73c4-412c-819d-7fd54c732abd">
+    <name>ТекстовоеОписаниеОтработанноеВремя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текстовое описание ОтработанноеВремя</value>
     </synonym>
     <templateType>TextDocument</templateType>
   </templates>
@@ -132,6 +164,14 @@
     </synonym>
     <templateType>TextDocument</templateType>
   </templates>
+  <templates uuid="95441583-9826-4f44-8a15-488a20705c79">
+    <name>ТекстовоеОписаниеСведенияОКандидатах</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текстовое описание СведенияОКандидатах</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
   <templates uuid="836ad9f9-b49e-47b6-ba15-349af6ec7321">
     <name>ТекстовоеОписаниеСвойстваСтатейФинансирования</name>
     <synonym>
@@ -185,6 +225,14 @@
     <synonym>
       <key>ru</key>
       <value>Текстовое описание СтажиСотрудников</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="b21c3dd1-80af-476a-b878-ec6fb36141c4">
+    <name>ТекстовоеОписаниеСтажПринятыхКандидатов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текстовое описание СтажПринятыхКандидатов</value>
     </synonym>
     <templateType>TextDocument</templateType>
   </templates>
